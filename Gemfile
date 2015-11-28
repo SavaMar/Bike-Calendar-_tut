@@ -17,6 +17,7 @@ gem "pry-rails", group:"development"
 
 #my_workspace
 gem "awesome_print", require:"ap"
+gem 'devise', '~> 3.3.0'
 
 group :doc do
   gem 'sdoc', require: false
