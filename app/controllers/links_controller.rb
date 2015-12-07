@@ -6,6 +6,7 @@ class LinksController < ApplicationController
   # GET /links.json
   def index
     @links = Link.all
+    @number = 0
   end
 
   # GET /links/1
