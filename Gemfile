@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
+gem 'acts_as_votable', '~> 0.10.0'
 
 group :development do
   gem "better_errors"

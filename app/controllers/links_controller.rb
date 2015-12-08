@@ -5,7 +5,7 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.all
+    @links = Link.all.order(created_at: :desc)
     @number = 0
   end
 
@@ -61,6 +61,18 @@ class LinksController < ApplicationController
       format.html { redirect_to links_url }
       format.json { head :no_content }
     end
+  end
+
+  def upvote
+    @link = Link.find(params[:id])
+    @link.upvote_by current_user
+    redirect_to :back
+  end
+
+  def downvote
+    @link = Link.find(params[:id])
+    @link.downvote_from current_user
+    redirect_to :back
   end
 
   private
